@@ -11,14 +11,14 @@ namespace RazorPagesTestSample.Data
         /// Gets or sets the message text.
         /// </summary>
         /// <value>
-        /// The text of the message, which is required and must be a string with a maximum length of 200 characters.
+        /// The text of the message, which is required and must be a string with a maximum length of 250 characters.
         /// </value>
         /// <exception cref="ValidationException">
-        /// Thrown when the text exceeds the 200 character limit.
+        /// Thrown when the text exceeds the 250 character limit.
         /// </exception>
         [Required]
         [DataType(DataType.Text)]
-        [StringLength(200, ErrorMessage = "There's a 200 character limit on messages. Please shorten your message.")]
+        [StringLength(250, ErrorMessage = "There's a 250 character limit on messages. Please shorten your message.")]
         public string Text { get; set; }
     }
     #endregion
