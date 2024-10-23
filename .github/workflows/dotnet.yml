@@ -80,4 +80,4 @@ jobs:
       - uses: azure/webapps-deploy@v2
         with:
           app-name: '{your_prefix}-dev'
-          images: {your_registry_name}.azurecr.io/techexcel/dotnetcoreapp:${{github.run_number}}
+          images: qkhltpvhpijrg.azurecr.io/techexcel/dotnetcoreapp:${{github.run_number}}
