@@ -69,7 +69,7 @@ jobs:
     needs: dockerBuildPush
     environment:
       name: dev
-      url: https://qkhltpvhpijrg-dev.azurewebsites.net/
+      url: https://{your_prefix}-dev.azurewebsites.net/
     
     steps:
       - name: 'Login via Azure CLI'
@@ -79,5 +79,5 @@ jobs:
 
       - uses: azure/webapps-deploy@v2
         with:
-          app-name: 'qkhltpvhpijrg-dev'
-          images: qkhltpvhpijrgmpnpreg.azurecr.io/techexcel/dotnetcoreapp:${{github.run_number}}
+          app-name: '{your_prefix}-dev'
+          images: {your_registry_name}.azurecr.io/techexcel/dotnetcoreapp:${{github.run_number}}
