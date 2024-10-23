@@ -1,6 +1,3 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
 name: .NET
 
 on:
@@ -26,8 +23,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore .src/Application/RazorPagesTestSample/RazorPagesTestSample.csproj
+      run: dotnet restore ./src/Application/src/RazorPagesTestSample/RazorPagesTestSample.csproj
     - name: Build
-      run: dotnet build --no-restore .src/Application/RazorPagesTestSample/RazorPagesTestSample.csproj
+      run: dotnet build --no-restore ./src/Application/src/RazorPagesTestSample/RazorPagesTestSample.csproj
     - name: Test
-      run: dotnet test --no-build --verbosity normal .src/Application/RazorPagesTestSample/RazorPagesTestSample.csproj
+      run: dotnet test --no-build --verbosity normal ./src/Application/src/RazorPagesTestSample/RazorPagesTestSample.csproj
